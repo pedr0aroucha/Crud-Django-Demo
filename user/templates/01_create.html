@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+	<div id="create" >
+		<h2><mark>C</mark>reate</h2>
+		{% if message != False %}
+			<span> {{ message }} </span>
+		{% endif %}
+		<form method="post"> 
+			{% csrf_token %}
+			<input type="text" name="full_name" placeholder="Full Name">
+			<input type="number" name="age" placeholder="Age" >
+			<button type="submit" class="buttonSubmit" >Submit</button>
+		</form>
+	</div>
+
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Crud - Django</title>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="{% static '/index.css' %}" rel="stylesheet">
+</head>
+<body>
+
+	<header>
+		<a href="/"> Home </a>
+		<a href="/create"> Create </a>
+		<a href="/read"> Read </a>
+		<a href="/update"> Update </a>
+		<a href="/delete"> Delete </a>
+	</header>
+	{% block content %} {% endblock %}
+</body>
+</html>

@@ -1,0 +1,127 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+
+	font-family: 'Fira Code', monospace;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 1em 2em;
+}
+
+a {
+	text-decoration: none;
+
+	color: black;
+}
+
+input {
+	padding: .5em;
+
+	border: .1em solid gray;
+	border-radius: .5em;
+}
+
+span {
+	padding: .5em;
+	margin-bottom: .5em;
+
+	border-radius: 5em;
+
+	color: white;
+	background-color: gray;
+}
+
+mark {
+	background-color: black;
+	color: white;
+
+	padding: 0 .25em;
+}
+mark#django {
+	background-color: #0C3C26;
+}
+
+#landing, 
+#create,
+#read,
+#update,
+#delete
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	min-height: 90vh;
+}
+
+#landing h2, 
+#create h2,
+#read h2,
+#update h2,
+#delete h2
+{
+	padding: .5em;
+}
+
+#create form {
+	display: flex;
+	flex-direction: column;
+}
+#create form input {
+	margin: .5em 0;
+}
+
+#update > form + form {
+	margin: 1em;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#update > form + form input {
+	margin: .5em 0;
+
+	border: none;
+	border-bottom: .1em solid gray;
+}
+
+#delete > form + form {
+	margin: 1em;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+#delete > form + form button {
+	margin-left: 1em;
+}
+
+.buttonSubmit {
+	background-color: black;
+	color: white;
+
+	padding: .5em 1em;
+
+	border-radius: 5em;
+	border: none;
+
+	transition: .5s all;
+
+	cursor: pointer;
+}
+
+#delete form + form .buttonSubmit:hover {
+	background-color: #e63946;
+}
+#update form + form .buttonSubmit:hover {
+	background-color: green;
+}

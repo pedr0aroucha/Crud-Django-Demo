@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+	<div id="read" >
+		<h2><mark>R</mark>ead</h2>
+		<ul>
+			{% for user in users %}
+				<li>{{ user.full_name }}</li>
+			{% endfor %}
+		</ul>
+	</div>
+
+{% endblock %}

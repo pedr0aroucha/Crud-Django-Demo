@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+	<div id="update" >
+		<h2><mark>U</mark>pdate</h2>
+		{% if message != False %}
+			<span> {{ message }} </span>
+		{% endif %}
+		<form method="POST">
+			{% csrf_token %}
+			<input type="text" name="full_name" placeholder="Full Name" />
+			<button type="submit" class="buttonSubmit" > Search </button>
+		</form>
+		{% if user %}
+			<form method="POST">
+				{% csrf_token %}
+				<input type="text" name="full_name" hidden value="{{ user }}" />
+				<input type="text" name="update" hidden value="Update authorized">
+				
+				<input type="text" name="new_full_name" value="{{ user }}" />
+				<input type="number" name="age" value="{{ user.age }}" />
+				<button type="submit" class="buttonSubmit">Submit</button>
+			</form>
+		{% endif %}
+	</div>
+
+{% endblock %}

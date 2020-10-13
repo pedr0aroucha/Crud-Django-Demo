@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+	<div id="delete" >
+		<h2><mark>D</mark>elete</h2>
+		{% if message != False %}
+			<span> {{ message }} </span>
+		{% endif %}
+		<form method="POST">
+			{% csrf_token %}
+			<input type="text" name="full_name" placeholder="Full Name" />
+			<button type="submit" class="buttonSubmit" > Search </button>
+		</form>
+		{% if user %}
+			<form method="POST">
+				{% csrf_token %}
+				<div> {{ user }} </div>
+				<input type="text" name="full_name" hidden value="{{ user }}" />
+				<input type="text" name="delete" hidden value="delete authorized" />
+				
+				<button type="submit" class="buttonSubmit" >Submit</button>
+			</form>
+		{% endif %}
+	</div>
+
+{% endblock %}
