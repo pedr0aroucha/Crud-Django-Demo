@@ -2,8 +2,8 @@
 
 ### 🛠 TECHNOLOGIES USED
 <ul>
-  <li>Python - Flask </li>
-  <li>HTML/CSS - Bootstrap </li>
+  <li>Python - Django</li>
+  <li>HTML/CSS</li>
 </ul>
 
 ### 🧰 DEPENDENCIES
