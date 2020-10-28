@@ -1,5 +1,3 @@
-# readme
-
 ### 🛠 TECHNOLOGIES USED
 <ul>
   <li>Python - Django</li>
